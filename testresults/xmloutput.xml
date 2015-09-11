@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Correct number of widgets" timestamp="2015-09-11T10:10:40" hostname="localhost" time="14.116" errors="0" tests="7" skipped="0" disabled="0" failures="3">
+  <testcase classname="Correct number of widgets" name="Pressing X on diseminiation window should remove it" time="2.286" />
+  <testcase classname="Correct number of widgets" name="expand sources and sources are listed" time="1.664" />
+  <testcase classname="Correct number of widgets" name="doubleclick source item, new widget with that item" time="1.454">
+   <failure type="exception" message="Failed: No element found using locator: By.cssSelector(&quot;html body.ng-scope div.desktop.background-image.ng-scope div.ng-scope.gridster.gridster-desktop.gridster-loaded ul li.widget.ng-scope.gridster-item.active div.source-selector ul.widget-content.source-selector-list.widget-transparency li.ng-scope div.widget-item-frame.source-selector-item.ng-scope div.source-selector-item-header span.source-selector-item-title.ng-binding&quot;)"><![CDATA[NoSuchElementError: No element found using locator: By.cssSelector("html body.ng-scope div.desktop.background-image.ng-scope div.ng-scope.gridster.gridster-desktop.gridster-loaded ul li.widget.ng-scope.gridster-item.active div.source-selector ul.widget-content.source-selector-list.widget-transparency li.ng-scope div.widget-item-frame.source-selector-item.ng-scope div.source-selector-item-header span.source-selector-item-title.ng-binding")
+    at new bot.Error (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/atoms/error.js:113:18)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:694:15
+    at [object Object].promise.ControlFlow.runInFrame_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:1877:20)
+    at [object Object].promise.Callback_.goog.defineClass.notify (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:2464:25)
+    at [object Object].promise.Promise.notify_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:563:12)
+    at Array.forEach (native)
+    at Object.goog.array.forEach (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/array/array.js:203:43)
+    at [object Object].promise.Promise.notifyAll_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:552:16)
+    at goog.async.run.processWorkQueue (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/async/run.js:125:21)
+    at runMicrotasksCallback (node.js:337:7)
+Error
+    at [object Object].ElementArrayFinder.applyAction_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:392:21)
+    at [object Object].self.(anonymous function) [as getRawId] (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:76:19)
+    at [object Object].self.(anonymous function) [as getRawId] (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:721:11)
+    at [object Object].webdriver.ActionSequence.mouseMove (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/actionsequence.js:106:46)
+    at [object Object].webdriver.ActionSequence.scheduleMouseAction_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/actionsequence.js:145:12)
+    at [object Object].webdriver.ActionSequence.doubleClick (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/actionsequence.js:276:15)
+    at Object.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:62:27)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:96:23
+    at new promise.Promise (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:355:5)
+    at controlFlowExecute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:82:18)
+From: Task: Run it("doubleclick source item, new widget with that item") in control flow
+    at Object.<anonymous> (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:81:14)
+    at attemptAsync (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1819:24)
+    at QueueRunner.run (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1774:9)
+    at QueueRunner.execute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1762:10)
+    at Spec.Env.queueRunnerFactory (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:627:35)
+    at Spec.execute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:353:10)
+    at Object.fn (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:2360:37)
+    at attemptAsync (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1819:24)
+    at QueueRunner.run (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1774:9)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1801:16
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:51:5)
+    at addSpecsToSuite (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:743:25)
+    at Env.describe (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:713:7)
+    at jasmineInterface.describe (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:3219:18)
+    at Object.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:4:1)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Correct number of widgets" name="collapse sources and nothing is listed" time="1.485" />
+  <testcase classname="Correct number of widgets" name="Click analyze tab, triage is opened" time="3.176" />
+  <testcase classname="Correct number of widgets" name="Click System Management, System Management is opened" time="0.377">
+   <failure type="exception" message="Failed: No element found using locator: By.cssSelector(&quot;html body.ng-scope div.main-menu.ng-scope ul.ng-scope.icon-menu-color-05 li.ng-scope i.fa.fa-cog.fa-3x&quot;)"><![CDATA[NoSuchElementError: No element found using locator: By.cssSelector("html body.ng-scope div.main-menu.ng-scope ul.ng-scope.icon-menu-color-05 li.ng-scope i.fa.fa-cog.fa-3x")
+    at new bot.Error (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/atoms/error.js:113:18)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:694:15
+    at [object Object].promise.ControlFlow.runInFrame_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:1877:20)
+    at [object Object].promise.Callback_.goog.defineClass.notify (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:2464:25)
+    at [object Object].promise.Promise.notify_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:563:12)
+    at Array.forEach (native)
+    at Object.goog.array.forEach (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/array/array.js:203:43)
+    at [object Object].promise.Promise.notifyAll_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:552:16)
+    at goog.async.run.processWorkQueue (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/async/run.js:125:21)
+    at runMicrotasksCallback (node.js:337:7)
+Error
+    at [object Object].ElementArrayFinder.applyAction_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:392:21)
+    at [object Object].self.(anonymous function) [as click] (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:76:19)
+    at [object Object].self.(anonymous function) [as click] (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:721:11)
+    at Object.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:112:47)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:96:23
+    at new promise.Promise (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:355:5)
+    at controlFlowExecute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:82:18)
+    at [object Object].promise.ControlFlow.runInFrame_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:1877:20)
+    at [object Object].promise.ControlFlow.runEventLoop_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:1755:8)
+    at [object Object].<anonymous> (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:2056:12)
+From: Task: Run it("Click System Management, System Management is opened") in control flow
+    at Object.<anonymous> (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:81:14)
+    at attemptAsync (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1819:24)
+    at QueueRunner.run (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1774:9)
+    at QueueRunner.execute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1762:10)
+    at Spec.Env.queueRunnerFactory (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:627:35)
+    at Spec.execute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:353:10)
+    at Object.fn (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:2360:37)
+    at attemptAsync (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1819:24)
+    at QueueRunner.run (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1774:9)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1801:16
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:108:5)
+    at addSpecsToSuite (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:743:25)
+    at Env.describe (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:713:7)
+    at jasmineInterface.describe (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:3219:18)
+    at Object.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:4:1)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Correct number of widgets" name="Click Manual link, manual is opened" time="0.419">
+   <failure type="exception" message="Failed: No element found using locator: By.cssSelector(&quot;html body.ng-scope div.main-menu.ng-scope ul.ng-scope.icon-menu-color-05 li i.fa.fa-question-circle.fa-3x&quot;)"><![CDATA[NoSuchElementError: No element found using locator: By.cssSelector("html body.ng-scope div.main-menu.ng-scope ul.ng-scope.icon-menu-color-05 li i.fa.fa-question-circle.fa-3x")
+    at new bot.Error (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/atoms/error.js:113:18)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:694:15
+    at [object Object].promise.ControlFlow.runInFrame_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:1877:20)
+    at [object Object].promise.Callback_.goog.defineClass.notify (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:2464:25)
+    at [object Object].promise.Promise.notify_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:563:12)
+    at Array.forEach (native)
+    at Object.goog.array.forEach (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/array/array.js:203:43)
+    at [object Object].promise.Promise.notifyAll_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:552:16)
+    at goog.async.run.processWorkQueue (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/async/run.js:125:21)
+    at runMicrotasksCallback (node.js:337:7)
+Error
+    at [object Object].ElementArrayFinder.applyAction_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:392:21)
+    at [object Object].self.(anonymous function) [as click] (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:76:19)
+    at [object Object].self.(anonymous function) [as click] (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/lib/element.js:721:11)
+    at Object.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:134:47)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:96:23
+    at new promise.Promise (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:355:5)
+    at controlFlowExecute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:82:18)
+    at [object Object].promise.ControlFlow.runInFrame_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:1877:20)
+    at [object Object].promise.ControlFlow.runEventLoop_ (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:1755:8)
+    at [object Object].<anonymous> (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/selenium-webdriver/lib/webdriver/promise.js:2056:12)
+From: Task: Run it("Click Manual link, manual is opened") in control flow
+    at Object.<anonymous> (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasminewd2/index.js:81:14)
+    at attemptAsync (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1819:24)
+    at QueueRunner.run (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1774:9)
+    at QueueRunner.execute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1762:10)
+    at Spec.Env.queueRunnerFactory (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:627:35)
+    at Spec.execute (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:353:10)
+    at Object.fn (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:2360:37)
+    at attemptAsync (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1819:24)
+    at QueueRunner.run (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1774:9)
+    at /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1801:16
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:129:5)
+    at addSpecsToSuite (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:743:25)
+    at Env.describe (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:713:7)
+    at jasmineInterface.describe (/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS/lib/node_modules/protractor/node_modules/jasmine/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:3219:18)
+    at Object.<anonymous> (/media/psf/Home/WebstormProjects/untitled1/expandAndCollapseAllWidgets.js:4:1)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>
