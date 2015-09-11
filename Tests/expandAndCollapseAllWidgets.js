@@ -4,7 +4,7 @@
 describe('Correct number of widgets', function() {
 
     beforeAll(function() {
-        var helper = require('./Helpers/login.js');
+        var helper = require('./../Helpers/login.js');
         helper.login();
         browser.sleep(100);
     });
