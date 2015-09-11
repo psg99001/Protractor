@@ -47,7 +47,7 @@ describe('Correct number of widgets', function() {
            }
         });
     });
-/*
+
     it('doubleclick source item, new widget with that item', function() {
         //Setup
         element(by.css('.fa-caret-square-o-down')).isPresent().then(function(result) {
@@ -145,5 +145,5 @@ describe('Correct number of widgets', function() {
             });
         });
 
-    });*/
+    });
 });
