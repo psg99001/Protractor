@@ -3,7 +3,7 @@
  */
 describe('Correct number of widgets', function() {
 
-    beforeEach(function() {
+    beforeAll(function() {
         var helper = require('./Helpers/login.js');
         helper.login();
         browser.sleep(100);

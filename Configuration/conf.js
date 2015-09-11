@@ -3,7 +3,7 @@
  */
 exports.config = {
     framework : 'jasmine2',
-    restartBrowserBetweenTests: true,
+    restartBrowserBetweenTests: false,
     capabilities: {
         'browserName': 'firefox'
     },
@@ -11,14 +11,11 @@ exports.config = {
         var jasmineReporters = require('jasmine-reporters');
         jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
             consolidateAll: true,
-            savePath: '/var/lib/jenkins/jobs/TestsProtractor/workspace',
+            savePath: '',
             filePrefix: 'xmloutput'
         }));
     },
-    asdasd
     seleniumAddress: 'http://localhost:4444/wd/hub',
     specs: ['../expandAndCollapseAllWidgets.js']
 };
 
-
-/Users/petersandberg/WebstormProjects/untitled1/Configuration/conf.js
