@@ -57,6 +57,7 @@ describe('Correct number of widgets', function() {
         });
         var firstElementInSource = "html body.ng-scope div.desktop.background-image.ng-scope div.ng-scope.gridster.gridster-desktop.gridster-loaded ul li.widget.ng-scope.gridster-item.active div.source-selector ul.widget-content.source-selector-list.widget-transparency li.ng-scope div.widget-item-frame.source-selector-item.ng-scope div.source-selector-item-header span.source-selector-item-title.ng-binding";
 
+        
         //double click on first item
         var clickedElement = element(by.css(firstElementInSource));
         browser.actions().doubleClick(element(by.css(firstElementInSource))).perform();

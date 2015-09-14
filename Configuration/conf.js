@@ -1,6 +1,7 @@
 /**
  * Created by petersandberg on 15-09-07.
  */
+//test
 exports.config = {
     framework : 'jasmine2',
     restartBrowserBetweenTests: false,
