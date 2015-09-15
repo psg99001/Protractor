@@ -3,7 +3,9 @@
  */
 describe('Correct number of widgets', function() {
 
-    beforeAll(function() {
+    var fs = require('fs');
+
+    beforeEach(function() {
         var helper = require('./../Helpers/login.js');
         helper.login();
         browser.sleep(100);
@@ -13,6 +15,13 @@ describe('Correct number of widgets', function() {
         browser.ignoreSynchronization = false;
         browser.sleep(200);
     });
+
+    function writeScreenShot(data, filename) {
+        var stream = fs.createWriteStream(filename);
+
+        stream.write(new Buffer(data, 'base64'));
+        stream.end();
+    }
 
 
     it('Pressing X on diseminiation window should remove it', function() {
@@ -50,22 +59,36 @@ describe('Correct number of widgets', function() {
 
     it('doubleclick source item, new widget with that item', function() {
         //Setup
+
+        browser.takeScreenshot().then(function (png) {
+            writeScreenShot(png, 'start.png');
+        });
+
         element(by.css('.fa-caret-square-o-down')).isPresent().then(function(result) {
             if (result) {
                 element(by.css('.fa-caret-square-o-down')).click();
             }
         });
-        var firstElementInSource = "html body.ng-scope div.desktop.background-image.ng-scope div.ng-scope.gridster.gridster-desktop.gridster-loaded ul li.widget.ng-scope.gridster-item.active div.source-selector ul.widget-content.source-selector-list.widget-transparency li.ng-scope div.widget-item-frame.source-selector-item.ng-scope div.source-selector-item-header span.source-selector-item-title.ng-binding";
+                                    //html body.ng-scope.body-image div.desktop.ng-scope div.ng-scope.gridster.gridster-desktop.gridster-loaded ul li.widget.ng-scope.gridster-item.active div.source-selector ul.widget-content.source-selector-list.widget-transparency li.ng-scope div.widget-item-frame.source-selector-item.ng-scope.active
+        var firstElementInSource = "/html/body/div[2]/div/ul/li[1]/div[1]/ul/li[2]/div/";
 
-        
+
+        browser.takeScreenshot().then(function (png) {
+            writeScreenShot(png, 'afterdown.png');
+        });
+
         //double click on first item
         var clickedElement = element(by.css(firstElementInSource));
-        browser.actions().doubleClick(element(by.css(firstElementInSource))).perform();
+        browser.actions().doubleClick(element(by.xpath(firstElementInSource))).perform();
 
         //get the last widget, and verify that it is the same that previously was doubleClicked.
         var elm = element.all(by.repeater('widget in widgets')).last();
 
         expect(elm.getText()).toContain(clickedElement.getText());
+
+
+
+
     });
 
     it('collapse sources and nothing is listed', function() {

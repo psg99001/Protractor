@@ -4,7 +4,7 @@
 //test
 exports.config = {
     framework : 'jasmine2',
-    restartBrowserBetweenTests: false,
+    restartBrowserBetweenTests: true,
     capabilities: {
         'browserName': 'firefox'
     },
