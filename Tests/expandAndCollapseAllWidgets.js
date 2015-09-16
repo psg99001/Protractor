@@ -28,21 +28,6 @@ describe('Correct number of widgets', function() {
     });
 
 
-  /*  it('Pressing X on diseminiation window should remove it', function() {
-        //Setup
-        element.all(by.css('.fa-2-5x')).first().click();
-
-        //Kill disemnitation window
-        element(by.xpath('/html/body/div[2]/div/ul/li[3]/div[1]/div[1]/div[1]/i[3]')).click();
-
-        //Disimination window is no longer present
-        //html body.ng-scope.body-image div.desktop.ng-scope div.ng-scope.gridster.gridster-desktop.gridster-loaded ul li.widget.ng-scope.gridster-item div.dissemination-log-widget div.title-bar div.widget-menu i.fa-times.fa.widget-hover
-
-        //i.fa-times.fa.widget-hover
-        expect(element(by.xpath('/html/body/div[2]/div/ul/li[3]/div[1]/div[1]/div[1]/i[3]')).isPresent()).toBe(false);
-
-    });*/
-
 
     it('expand sources and sources are listed', function() {
         //Setup
@@ -118,63 +103,4 @@ describe('Correct number of widgets', function() {
         });
     });
 
-    it('Click analyze tab, triage is opened', function() {
-        //Setup
-        var firstElementInSource = "html body.ng-scope div.main-menu.ng-scope ul.ng-scope.icon-menu-color-05 li i.fa.fa-line-chart.fa-2-5x";
-
-        element(by.css(firstElementInSource)).click().then(function () {
-            browser.getAllWindowHandles().then(function (handles) {
-                expect(handles.length).toEqual(2);
-                newWindowHandle = handles[1]; // this is your new window
-
-                browser.switchTo().window(newWindowHandle).then(function () {
-                    browser.sleep(1000);
-                    expect(browser.getCurrentUrl()).toContain('https://analyze.opal.nyk.learningwell.se/Refactor/');
-                });
-            });
-        });
-
-    });
-
-    it('Click System Management, System Management is opened', function() {
-        //Setup
-        var firstElementInSource = "html body.ng-scope div.main-menu.ng-scope ul.ng-scope.icon-menu-color-05 li.ng-scope i.fa.fa-cog.fa-3x";
-
-        element(by.css(firstElementInSource)).click().then(function () {
-            browser.getAllWindowHandles().then(function (handles) {
-                expect(handles.length).toEqual(2);
-                newWindowHandle = handles[1]; // this is your new window
-
-                browser.switchTo().window(newWindowHandle).then(function () {
-                    browser.sleep(1000);
-                    expect(browser.getCurrentUrl()).toContain('https://triage.opal.nyk.learningwell.se/system-management/app/index.html');
-                });
-
-                browser.switchTo().window(handles[0]);
-            });
-
-        });
-
-    });
-
-    it('Click Manual link, manual is opened', function() {
-        //Setup
-        var firstElementInSource = "html body.ng-scope div.main-menu.ng-scope ul.ng-scope.icon-menu-color-05 li i.fa.fa-question-circle.fa-3x";
-
-
-        element(by.css(firstElementInSource)).click().then(function () {
-            browser.getAllWindowHandles().then(function (handles) {
-                expect(handles.length).toEqual(2);
-                newWindowHandle = handles[1]; // this is your new window
-
-                browser.ignoreSynchronization = true;
-                browser.switchTo().window(newWindowHandle).then(function () {
-                    browser.sleep(1000);
-                    expect(browser.getCurrentUrl()).toContain('https://triage.opal.nyk.learningwell.se/user-manual/user-manual.html');
-
-                });
-            });
-        });
-
-    });*/
 });

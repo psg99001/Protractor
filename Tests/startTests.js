@@ -10,7 +10,7 @@ describe('testing', function() {
     var loginPage;
     var startPage;
 
-    beforeEach(function() {
+    beforeEach(function () {
         browser.ignoreSynchronization = true;
         loginPage = new LoginPage();
         loginPage.typeUsername('lw-psg');
@@ -21,16 +21,16 @@ describe('testing', function() {
 
     });
 
-    it('Remove disiminationWindow', function() {
+    it('Remove disiminationWindow', function () {
         console.log('hej hopp');
         browser.sleep(2000);
-        startPage.disWindowClose.isPresent().then(function(result){
-           if(result){
+        startPage.disWindowClose.isPresent().then(function (result) {
+            if (result) {
                 startPage.disWindowClose.click();
-           }
-            else{
+            }
+            else {
 
-           }
+            }
         });
 
         startPage.disWindowLeftMenu.click();
@@ -40,7 +40,7 @@ describe('testing', function() {
         expect(startPage.disWindowClose.isPresent()).toBe(false);
     });
 
-    it('Click analyze tab, sb is opened', function() {
+    it('Click analyze tab, sb is opened', function () {
         //Setup
         startPage.analysisTool.click().then(function () {
             browser.getAllWindowHandles().then(function (handles) {
@@ -55,7 +55,7 @@ describe('testing', function() {
         });
     });
 
-    it('Click system management, sm is opened', function() {
+    it('Click system management, sm is opened', function () {
         //Setup
         startPage.systemManagement.click().then(function () {
             browser.getAllWindowHandles().then(function (handles) {
@@ -70,7 +70,7 @@ describe('testing', function() {
         });
     });
 
-    it('Click help,help link is opened', function() {
+    it('Click help,help link is opened', function () {
         //Setup
         startPage.help.click().then(function () {
             browser.getAllWindowHandles().then(function (handles) {
@@ -83,5 +83,21 @@ describe('testing', function() {
                 });
             });
         });
+    });
+
+    it('logout and confirm', function () {
+        //Setup
+        startPage.logoutLeftMenu.click();
+        startPage.logoutConfirm.click();
+        expect(startPage.title).toBe('Login');
+
+    });
+
+    it('logout and cancel', function () {
+        //Setup
+        startPage.logoutLeftMenu.click();
+        startPage.logoutCancel.click();
+        expect(startPage.title).toBe('Triage');
+
     });
 });
