@@ -23,16 +23,23 @@ describe('Correct number of widgets', function() {
         stream.end();
     }
 
+    it('testing more', function() {
+        element.all(by.css('[ng-click="toggleCollapseWidget(widget)"]')).first().click();
+    });
+
 
     it('Pressing X on diseminiation window should remove it', function() {
         //Setup
-        element(by.css('.fa-2-5x')).click();
+        element.all(by.css('.fa-2-5x')).first().click();
 
         //Kill disemnitation window
-        element(by.css('i.fa-times.fa.widget-hover')).click();
+        element(by.xpath('/html/body/div[2]/div/ul/li[3]/div[1]/div[1]/div[1]/i[3]')).click();
 
         //Disimination window is no longer present
-        expect(element(by.css('i.fa-times.fa.widget-hover')).isPresent()).toBe(false);
+        //html body.ng-scope.body-image div.desktop.ng-scope div.ng-scope.gridster.gridster-desktop.gridster-loaded ul li.widget.ng-scope.gridster-item div.dissemination-log-widget div.title-bar div.widget-menu i.fa-times.fa.widget-hover
+
+        //i.fa-times.fa.widget-hover
+        expect(element(by.xpath('/html/body/div[2]/div/ul/li[3]/div[1]/div[1]/div[1]/i[3]')).isPresent()).toBe(false);
 
     });
 
@@ -69,8 +76,8 @@ describe('Correct number of widgets', function() {
                 element(by.css('.fa-caret-square-o-down')).click();
             }
         });
-                                    //html body.ng-scope.body-image div.desktop.ng-scope div.ng-scope.gridster.gridster-desktop.gridster-loaded ul li.widget.ng-scope.gridster-item.active div.source-selector ul.widget-content.source-selector-list.widget-transparency li.ng-scope div.widget-item-frame.source-selector-item.ng-scope.active
-        var firstElementInSource = "/html/body/div[2]/div/ul/li[1]/div[1]/ul/li[2]/div/";
+
+        var firstElementInSource = "/html/body/div[2]/div/ul/li[1]/div[1]/ul/li[2]/div";
 
 
         browser.takeScreenshot().then(function (png) {
@@ -78,7 +85,7 @@ describe('Correct number of widgets', function() {
         });
 
         //double click on first item
-        var clickedElement = element(by.css(firstElementInSource));
+        var clickedElement = element(by.xpath(firstElementInSource));
         browser.actions().doubleClick(element(by.xpath(firstElementInSource))).perform();
 
         //get the last widget, and verify that it is the same that previously was doubleClicked.
@@ -169,5 +176,5 @@ describe('Correct number of widgets', function() {
             });
         });
 
-    });
+    });*/
 });

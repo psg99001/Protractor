@@ -17,6 +17,7 @@ exports.config = {
         }));
     },
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['../Tests/expandAndCollapseAllWidgets.js']
+    specs: ['../Tests/startTests.js',
+            '../Tests/login.js']
 };
 
