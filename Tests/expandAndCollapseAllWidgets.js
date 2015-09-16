@@ -28,7 +28,7 @@ describe('Correct number of widgets', function() {
     });
 
 
-    it('Pressing X on diseminiation window should remove it', function() {
+  /*  it('Pressing X on diseminiation window should remove it', function() {
         //Setup
         element.all(by.css('.fa-2-5x')).first().click();
 
@@ -41,7 +41,7 @@ describe('Correct number of widgets', function() {
         //i.fa-times.fa.widget-hover
         expect(element(by.xpath('/html/body/div[2]/div/ul/li[3]/div[1]/div[1]/div[1]/i[3]')).isPresent()).toBe(false);
 
-    });
+    });*/
 
 
     it('expand sources and sources are listed', function() {

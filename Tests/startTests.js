@@ -40,7 +40,48 @@ describe('testing', function() {
         expect(startPage.disWindowClose.isPresent()).toBe(false);
     });
 
+    it('Click analyze tab, sb is opened', function() {
+        //Setup
+        startPage.analysisTool.click().then(function () {
+            browser.getAllWindowHandles().then(function (handles) {
+                //new window is opened
+                expect(handles.length).toEqual(2);
 
+                browser.switchTo().window(handles[1]).then(function () {
+                    browser.sleep(1000);
+                    expect(browser.getCurrentUrl()).toContain(startPage.ANALYZELINK);
+                });
+            });
+        });
+    });
 
+    it('Click system management, sm is opened', function() {
+        //Setup
+        startPage.systemManagement.click().then(function () {
+            browser.getAllWindowHandles().then(function (handles) {
+                //new window is opened
+                expect(handles.length).toEqual(2);
 
+                browser.switchTo().window(handles[1]).then(function () {
+                    browser.sleep(1000);
+                    expect(browser.getCurrentUrl()).toContain(startPage.SYSTEMMANAGEMENTLINK);
+                });
+            });
+        });
+    });
+
+    it('Click help,help link is opened', function() {
+        //Setup
+        startPage.help.click().then(function () {
+            browser.getAllWindowHandles().then(function (handles) {
+                //new window is opened
+                expect(handles.length).toEqual(2);
+
+                browser.switchTo().window(handles[1]).then(function () {
+                    browser.sleep(1000);
+                    expect(browser.getCurrentUrl()).toContain(startPage.HELPLINK);
+                });
+            });
+        });
+    });
 });
