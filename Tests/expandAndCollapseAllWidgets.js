@@ -78,9 +78,6 @@ describe('Correct number of widgets', function() {
 
         expect(elm.getText()).toContain(clickedElement.getText());
 
-
-
-
     });
 
     it('collapse sources and nothing is listed', function() {
