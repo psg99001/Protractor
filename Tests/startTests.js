@@ -100,145 +100,29 @@ describe('testing', function() {
         expect(startPage.title).toBe('Triage');
     });
 
-
-
-
-
     it('open source item', function() {
 
-        element(by.css('.fa-caret-square-o-down')).isPresent().then(function (result) {
+        startPage.maximizeWidget.isPresent().then(function (result) {
             if (result) {
-                element(by.css('.fa-caret-square-o-down')).click();
+                startPage.maximizeWidget.click();
             }
         });
 
         browser.sleep(2000).then(function () {
         });
 
-        browser.wait(element(by.css('[class="widget-item-frame source-selector-item ng-scope"]')).isDisplayed().then(function (result) {
+        browser.wait(startPage.itemInWidget.isDisplayed().then(function (result) {
             var clickedElement = element(by.css('[class="widget-item-frame source-selector-item ng-scope"]'));
-            browser.actions().doubleClick(clickedElement).perform().then(function (result) {
-                var elm = element.all(by.repeater('widget in widgets')).last();
-                expect(elm.getText()).toContain(element(by.css('[class="source-selector-item-header"]')).getText());
+            browser.actions().doubleClick(startPage.itemInWidget).perform().then(function (result) {
+                var elm = startPage.widgetsRepeater.last();
+                startPage.itemInWidgetHeader.getText().then(function(text){
+                    expect(elm.getText()).toContain(text.toUpperCase());
+                });
             });
 
         })).then(function(result1) {
             element(by.css('[ng-click="close()"]')).click();
         });
     });
-
-
-
-  /*  it('doubleclick source item, new widget with that item', function() {
-        //Setup
-
-
-        element(by.css('.fa-caret-square-o-down')).isPresent().then(function(result) {
-            if (result) {
-                element(by.css('.fa-caret-square-o-down')).click();
-            }
-        });
-
-        var firstElementInSource = "/html/body/div[2]/div/ul/li[1]/div[1]/ul/li[2]/div";
-
-
-        browser.takeScreenshot().then(function (png) {
-            writeScreenShot(png, 'afterdown.png');
-        });
-
-        //double click on first item
-        var clickedElement = element(by.xpath(firstElementInSource));
-        browser.actions().doubleClick(element(by.xpath(firstElementInSource))).perform();
-
-        //get the last widget, and verify that it is the same that previously was doubleClicked.
-        var elm = element.all(by.repeater('widget in widgets')).last();
-
-        expect(elm.getText()).toContain(clickedElement.getText());
-
-    });*/
-
-/*
-
-    it('expand widget', function() {
-        //Setup
-        browser.sleep(1000);
-        //browser.actions().doubleClick(element(by.css('[ ng-controller="SourceSelectorWidgetCtrl"]'))).perform();
-        // var elements = element.all(by.repeater('widget in widgets'));
-        // var elements = element.all(by.css('[ng-click="toggleCollapseWidget(widget)"]'));
-
-
-        element.all(by.css('[ng-click="toggleCollapseWidget(widget)"]')).then(function (items) {
-            console.log(items.length);
-
-            for (var i = 0; i < items.length; i++) {
-             //   expect(items[i].getOuterHtml()).toContain('fa widget-hover fa-caret-square-o-up');
-
-                expect((items[i].getOuterHtml()).toContain('fa widget-hover fa-caret-square-o-down')).then(function (test) {
-                    if(test){
-                        console.log('true');
-                    }
-                    else{
-                        console.log('false');
-                    }
-                });
-            }
-
-        });
-
-    });  */
-      // var test = element.all(by.repeater('source in (widget.extra.isCollapsed() ? null : sources)'));
-       // expect(test.count()).toBeGreaterThan(0);
-
-       /* console.log(elements.length);
-        for(var i=0; i < elements.length; i++) {
-            console.log('number '+i);
-            elements[i].click();
-        }
-        //element.all(by.css('[ng-click="toggleCollapseWidget(widget)"]')).last().click();
-
-       /* elements.first().then(function(test) {
-            //console.log(test.length);
-            console.log('testing aag');
-            /*test.findElement(by.css('[ng-click="toggleCollapseWidget(widget)"]')).then(function (div) {
-                console.log('testing aag');
-                div.click();
-            });
-        });
-
-    /*    element.all(by.repeater('widget in widgets')).first().then(function(table) {
-          console.log(table.length);
-            table.findElement(by.css('[ng-click="toggleCollapseWidget(widget)"]')).then(function(div) {
-                console.log('testing again');
-                div.click();
-            });
-
-        });
-
-
-
-     /*
-
-            .isPresent().then(function(result) {
-            if (result) {
-                element(by.css('.fa-caret-square-o-down')).click();
-            }
-        });
-
-        var firstElementInSource = "/html/body/div[2]/div/ul/li[1]/div[1]/ul/li[2]/div";
-
-
-        browser.takeScreenshot().then(function (png) {
-            writeScreenShot(png, 'afterdown.png');
-        });
-
-        //double click on first item
-        var clickedElement = element(by.xpath(firstElementInSource));
-        browser.actions().doubleClick(element(by.xpath(firstElementInSource))).perform();
-
-        //get the last widget, and verify that it is the same that previously was doubleClicked.
-        var elm = element.all(by.repeater('widget in widgets')).last();
-
-        expect(elm.getText()).toContain(clickedElement.getText());*/
-
 
 });

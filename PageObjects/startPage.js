@@ -15,6 +15,10 @@ StartPage.prototype = Object.create({}, {
 
     title: { get: function() { return browser.getTitle(); }},
     disWindowLeftMenu: { get: function() { return  element.all(by.css('.fa-2-5x')).first();  }},
+    maximizeWidget: { get: function() { return  element(by.css('.fa-caret-square-o-down'));  }},
+    widgetsRepeater: { get: function() { return  element.all(by.repeater('widget in widgets'));  }},
+    itemInWidgetHeader: { get: function() { return  element(by.css('[class="source-selector-item-header"]'));  }},
+    itemInWidget: { get: function() { return  element(by.css('[class="widget-item-frame source-selector-item ng-scope"]'));  }},
     logoutLeftMenu: { get: function() { return  element.all(by.css('[title="Log Out (F2)"]')).first();  }},
     logoutConfirm: { get: function() { return  element.all(by.css('[ng-click="logout()"]')).first();  }},
     logoutCancel: { get: function() { return  element.all(by.css('[ng-click="toggleLogout()"]')).first();  }},
