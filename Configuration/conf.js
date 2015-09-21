@@ -17,8 +17,8 @@ exports.config = {
         }));
     },
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: [/*'../Tests/startTests.js',
-            '../Tests/login.js',*/
+    specs: ['../Tests/startTests.js',
+            '../Tests/login.js',
             '../Tests/systemManagementTests.js']
 };
 
